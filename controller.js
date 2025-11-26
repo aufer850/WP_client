@@ -9,12 +9,13 @@ export default class Controller {
         this.renderPage('home');
     }
 
-    async renderPage(pageName) {
+    async renderPage() {
         this.view.app.innerHTML = '<div>Завантаження...</div>'; 
         //  await
         const data = await this.model.getData();
-        this.view.render(pageName, data);
+        this.view.render(data);
     }
 
 }
+
 
