@@ -12,8 +12,9 @@ export default class Controller {
     async renderPage(pageName) {
         this.view.app.innerHTML = '<div>Завантаження...</div>'; 
         //  await
-        const data = await this.model.getAnimeData();
+        const data = await this.model.getData();
         this.view.render(pageName, data);
     }
 
 }
+
