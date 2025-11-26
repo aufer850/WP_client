@@ -1,6 +1,6 @@
 export default class Model {
     constructor(){
-        this.apiUrl = "https://wp-server-6viv.onrender.com;
+        this.apiUrl = "https://wp-server-6viv.onrender.com";
         this.data = null;
     }
     
@@ -9,3 +9,4 @@ export default class Model {
     }
 
 }
+
