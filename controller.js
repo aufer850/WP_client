@@ -9,8 +9,11 @@ export default class Controller {
         this.renderPage('home');
     }
 
-    renderPage() {
-        const data = this.model.getData();
-        this.view.render(data);
+    async renderPage(pageName) {
+        this.view.app.innerHTML = '<div>Завантаження...</div>'; 
+        //  await
+        const data = await this.model.getAnimeData();
+        this.view.render(pageName, data);
     }
+
 }
